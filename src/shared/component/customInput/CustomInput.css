@@ -1,0 +1,21 @@
+.custom-input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+.custom_label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.custom_input_filed {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+  color: #000;
+  outline: none;
+  width: 100%;
+}
