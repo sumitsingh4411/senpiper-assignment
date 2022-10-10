@@ -1,0 +1,39 @@
+.custom-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.custom_checkbox_label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}
+.custom_checkbox_container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.checkbox_container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-items: center;
+}
+.checkbox_label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+}
+.custom_checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
