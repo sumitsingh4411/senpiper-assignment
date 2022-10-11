@@ -1,63 +1,38 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import CustomCheckBox from "../../shared/component/customCheckbox/CustomCheckBox";
 import CustomInput from "../../shared/component/customInput/CustomInput";
 import TabSection from "../../shared/component/tabSection/TabSection";
-import { FEEDBACK_FORM_LABEL, PAGE_KEY } from "../../shared/utils/constant";
+import {
+  FEEDBACK_FORM_LABEL,
+  INITIAL_STATE,
+  PAGE_KEY,
+  URLPaths,
+} from "../../shared/utils/constant";
+import { checkHasError, getAllError, setItemToLocalStorage } from "../../shared/utils/helper";
 import "./FeddBackForm.css";
 
 export default function FeedBackForm() {
-  const [feedbackForm, setFeedbackForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    country: "",
-    service: "",
-    beverage: "",
-    clean: "",
-    food: "",
-  });
-  const [error, setError] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    country: "",
-    service: "",
-    beverage: "",
-    clean: "",
-    food: "",
-  });
+  const navigate = useNavigate();
+  const [feedbackForm, setFeedbackForm] = useState(INITIAL_STATE);
+  const [error, setError] = useState(INITIAL_STATE);
+
   const sendFeedbackForm = () => {
-    let tempError = { ...error };
-    if (feedbackForm.name === "") {
-      tempError.name = "Name is required";
+    let res_error = getAllError(feedbackForm, setError, error);
+    if (checkHasError(res_error)) {
+      return;
+    } else {
+      setItemToLocalStorage(feedbackForm);
+      navigate(URLPaths.FEEDBACK_SUCCESS);
     }
-    if (feedbackForm.email === "") {
-      tempError.email = "Email is required";
-    }
-    if (feedbackForm.phone === "") {
-      tempError.phone = "Phone is required";
-    }
-    if (feedbackForm.country === "") {
-      setError({ ...error, country: "Required" });
-    }
-    if (feedbackForm.service === "") {
-      tempError.service = "Required";
-    }
-    if (feedbackForm.beverage === "") {
-      tempError.beverage = "Required";
-    }
-    if (feedbackForm.clean === "") {
-      tempError.clean = "Required";
-    }
-    if (feedbackForm.food === "") {
-      tempError.food = "Required";
-    }
-    setError(tempError);
   };
-  console.log(error);
+
   const feedbackFormOnchange = (e: any) => {
     const { name, value } = e.target;
     setFeedbackForm({ ...feedbackForm, [name]: value });
+    if (checkHasError(error)) {
+      getAllError({ ...feedbackForm, [name]: value }, setError, error);
+    }
   };
 
   return (

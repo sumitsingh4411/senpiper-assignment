@@ -18,13 +18,14 @@ export default function CustomCheckBox({
       </label>
       <div className="custom_checkbox_container">
         {CHECKBOX_LABEL.map((item: any) => (
-          <div className="checkbox_container">
+          <div className="checkbox_container" key={item.id}>
             <input
               type="checkbox"
               className="custom_checkbox"
-              value={value}
+              value={item?.label}
               onChange={onChange}
               name={name}
+              checked={value === item?.label}
             />
             <span className="checkbox_label">{item.label}</span>
           </div>

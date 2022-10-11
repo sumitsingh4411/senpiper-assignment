@@ -9,8 +9,9 @@ export default function AllRoutes() {
     <Router>
       <Routes>
         <Route path={URLPaths.HOME} element={<FeedBackForm />} />
-        <Route path={URLPaths.FEEDBACK_FORM} element={<SuccessFeedback />} />
+        <Route path={URLPaths.FEEDBACK_FORM} element={<FeedBackForm />} />
         <Route path={URLPaths.FEEDBACK_LIST} element={<FeedBackList />} />
+        <Route path={URLPaths.FEEDBACK_SUCCESS} element={<SuccessFeedback />} />
         <Route path="**" element={<div>Not Found</div>} />
       </Routes>
     </Router>

@@ -1,9 +1,7 @@
-import React from "react";
 import TabSection from "../../shared/component/tabSection/TabSection";
 import { PAGE_KEY } from "../../shared/utils/constant";
-import FeedBackSingleRow from "./FeedBackSingleRow";
 import "./FeedBackList.css";
-import FeedBackListHeader from "./FeedBackListHeader";
+import FeedBackListTable from "./FeedBackListTable";
 
 export default function FeedBackList() {
   return (
@@ -14,8 +12,7 @@ export default function FeedBackList() {
           <div className="feedback-list-header"></div>
           <div className="feedback-list-container">
             <div className="feedback-list-item">
-              <FeedBackListHeader />
-              <FeedBackSingleRow />
+              <FeedBackListTable/>
             </div>
           </div>
         </div>
