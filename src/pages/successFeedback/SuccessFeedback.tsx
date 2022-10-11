@@ -1,10 +1,17 @@
 import React from "react";
 import TabSection from "../../shared/component/tabSection/TabSection";
-import { PAGE_KEY } from "../../shared/utils/constant";
+import { PAGE_KEY, URLPaths } from "../../shared/utils/constant";
 import "./SuccessFeedback.css";
 import successIcon from "../../assets/success.png";
+import { useNavigate } from "react-router-dom";
 
 export default function SuccessFeedback() {
+  const navigate = useNavigate();
+
+  const closeSuccess = () => {
+    navigate(URLPaths.FEEDBACK_FORM);
+  };
+
   return (
     <div className="feedback-success">
       <TabSection activeTab={PAGE_KEY.FEEDBACK_FORM} />
@@ -15,7 +22,9 @@ export default function SuccessFeedback() {
           {" "}
           we will work towards improving your experience
         </p>
-        <button className="home_button">Close</button>
+        <button className="home_button" onClick={closeSuccess}>
+          Close
+        </button>
       </div>
     </div>
   );

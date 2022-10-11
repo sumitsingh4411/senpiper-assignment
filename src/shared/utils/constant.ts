@@ -13,6 +13,7 @@ export const enum URLPaths {
   FEEDBACK_FORM = "/feedback-form",
   FEEDBACK_LIST = "/feedback-list",
   HOME = "/",
+  FEEDBACK_SUCCESS = "/feedback-success",
 }
 
 export const enum PAGE_KEY {
@@ -45,3 +46,20 @@ export const CHECKBOX_LABEL = [
     label: "Bad",
   },
 ];
+
+export const INITIAL_STATE = {
+  name: "",
+  email: "",
+  phone: "",
+  country: "",
+  service: "",
+  beverage: "",
+  clean: "",
+  food: "",
+};
+
+export const enum ERROR_MESSAGE {
+  EMPTY_ERROR = "Please enter value for the above field",
+  EMAIL_ERROR = "Please enter valid email",
+  PHONE_ERROR = "Please enter valid phone number",
+}
