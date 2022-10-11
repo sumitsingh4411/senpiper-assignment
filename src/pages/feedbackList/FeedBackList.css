@@ -38,3 +38,25 @@
   outline: none;
   color: white;
 }
+.feedback-list-item {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  
+}
+.feedback-list-header-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #d27dda;
+}
+.header-item{
+  display:flex;
+  padding: 5px 10px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
