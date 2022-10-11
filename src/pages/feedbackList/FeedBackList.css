@@ -4,3 +4,37 @@
   height: 100%;
   max-width: 1200px;
 }
+.feedback-list {
+  margin-top: 20px;
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.feedback-list-container-top {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 400px;
+}
+.feedback-list-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.delete_button {
+  width: 140px;
+  height: 40px;
+  background-color: #da4545;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: white;
+}

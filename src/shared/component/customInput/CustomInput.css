@@ -19,3 +19,25 @@
   outline: none;
   width: 100%;
 }
+.required_value {
+  color: red;
+}
+.error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 32px;
+  background-color: rgb(238, 160, 160);
+  border-radius: 4px;
+  padding: 0px 10px;
+  margin-top: 4px;
+}
+.error_icon {
+  width: 14px;
+  height: 14px;
+}
+.error_text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #df3333;
+}
