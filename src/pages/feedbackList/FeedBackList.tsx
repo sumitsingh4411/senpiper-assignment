@@ -5,6 +5,7 @@ import {
   getDataFromLocalStorage,
   removeItemFromLocalStorage,
 } from "../../shared/utils/helper";
+import FeedBackHeader from "./FeedBackHeader";
 import "./FeedBackList.css";
 import FeedBackListTable from "./FeedBackListTable";
 
@@ -25,7 +26,9 @@ export default function FeedBackList() {
       <TabSection activeTab={PAGE_KEY.FEEDBACK_LIST} />
       <div className="feedback-list">
         <div className="feedback-list-container-top">
-          <div className="feedback-list-header"></div>
+          <div className="feedback-list-header">
+            <FeedBackHeader />
+          </div>
           <div className="feedback-list-container">
             <div className="feedback-list-item">
               <FeedBackListTable
