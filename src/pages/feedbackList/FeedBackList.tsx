@@ -27,7 +27,7 @@ export default function FeedBackList() {
       <div className="feedback-list">
         <div className="feedback-list-container-top">
           <div className="feedback-list-header">
-            <FeedBackHeader />
+            <FeedBackHeader feedbackList={feedbackList} />
           </div>
           <div className="feedback-list-container">
             <div className="feedback-list-item">

@@ -58,7 +58,7 @@ table {
 th {
   white-space: nowrap;
   padding: 8px 16px;
-  background: #f7e2f7;
+  background: rgb(222, 199, 232);
   font-size: 14px;
   font-weight: 500px;
   color: rgb(77, 75, 75);
@@ -120,13 +120,13 @@ td {
   cursor: pointer;
 }
 .filter-input-icon {
-  width: 200px;
+  width: 140px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
-  border: 1px solid gray;
+  border: 1px solid rgb(201, 199, 199);
   border-radius: 4px;
   background-color: white;
 }
@@ -138,9 +138,9 @@ td {
   background: none;
 }
 .add_button {
-  width: 140px;
+  width: 100px;
   height: 40px;
-  background-color: #45da6a;
+  background-color: #0da333;
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -151,7 +151,7 @@ td {
   color: white;
 }
 .filter-input-reload {
-  width: 50px;
+  width: 40px;
   height: 40px;
   background-color: white;
   border-radius: 4px;
@@ -162,4 +162,13 @@ td {
   border: none;
   outline: none;
   color: white;
+}
+
+input[type="checkbox"] {
+  accent-color: rgb(131, 18, 183);
+}
+
+.link-color {
+  color: rgb(40, 18, 183);
+  cursor: pointer;
 }

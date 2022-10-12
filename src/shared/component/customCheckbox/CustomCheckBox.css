@@ -60,3 +60,6 @@
   color: #df3333;
 }
 
+input[type="checkbox"] {
+  accent-color: rgb(131, 18, 183);
+}

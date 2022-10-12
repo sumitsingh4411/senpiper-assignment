@@ -59,7 +59,7 @@ export default function FeedBackListTable({
                     checked={checkValue[index]}
                   />
                 </td>
-                <td>View details</td>
+                <td className="link-color">View details</td>
                 <td>{item?.name}</td>
                 <td>{item?.email}</td>
                 <td>{item?.phone}</td>
@@ -72,7 +72,7 @@ export default function FeedBackListTable({
           </tbody>
         </table>
       ) : (
-        <div className="no-data-found">No data found</div>
+        <div className="no-data-found">No feedback data found</div>
       )}
     </>
   );

@@ -1,7 +1,7 @@
 .feedback-success {
   padding: 40px 100px;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   max-width: 1200px;
 }
 .feedback-success-container {
@@ -31,7 +31,7 @@
   margin-top: 40px;
   width: 140px;
   height: 40px;
-  background-color: #84268d;
+  background-color: rgb(131, 18, 183);
   border-radius: 4px;
   display: flex;
   align-items: center;
