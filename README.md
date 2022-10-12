@@ -1,3 +1,11 @@
+# live url : https://senpiper-assignment-xi.vercel.app/
+
+## local setup for project
+ 1. download this project
+ 2. run command "yarn install" (make sure nodejs and yarn should be install in your computer)
+ 3. run command "yarn start"
+ 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
