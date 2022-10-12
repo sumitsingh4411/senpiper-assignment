@@ -1,0 +1,19 @@
+.custom-select {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.flag {
+  width: 20px;
+  height: 15px;
+}
+.down {
+  width: 10px;
+  height: 10px;
+}

@@ -41,3 +41,9 @@
   font-weight: 600;
   color: #df3333;
 }
+.custom-input-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+}

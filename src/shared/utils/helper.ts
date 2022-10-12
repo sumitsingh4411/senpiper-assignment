@@ -93,3 +93,17 @@ export const getDataFromLocalStorage = () => {
     return [];
   }
 };
+
+export const removeItemFromLocalStorage = (
+  list: any,
+  setFeedbackList: Function
+) => {
+  console.log(list);
+  let data: any = localStorage.getItem("feedbackData");
+  let tempData = JSON.parse(data);
+  let res = tempData.filter(
+    (item: any, index: number) => list[index] === false
+  );
+  setFeedbackList(res);
+  localStorage.setItem("feedbackData", JSON.stringify(res));
+};

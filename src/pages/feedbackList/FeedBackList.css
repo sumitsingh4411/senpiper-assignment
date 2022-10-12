@@ -86,3 +86,14 @@ td {
   font-weight: 500px;
   color: rgb(77, 75, 75);
 }
+.no-data-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(77, 75, 75);
+  font-style: italic;
+  background-color: white;
+}

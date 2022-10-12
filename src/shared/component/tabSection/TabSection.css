@@ -1,5 +1,5 @@
 .tab-section {
-  height: 50px;
+  height: 60px;
   width: 100%;
   background-color: #f5f5f5;
   border-radius: 8px;
@@ -10,14 +10,14 @@
 }
 
 .tab-name {
-  font-size: 16px;
+  font-size: 21px;
   font-weight: 600;
   color: #000000;
   cursor: pointer;
 }
 
 .active-tab {
-  color: #0000ee;
-  border-bottom: 2px solid #0000ee;
+  color: #3737e6;
+  border-bottom: 2px solid #3737e6;
   font-weight: 700;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CustomCheckBox from "../../shared/component/customCheckbox/CustomCheckBox";
 import CustomInput from "../../shared/component/customInput/CustomInput";
@@ -9,7 +9,11 @@ import {
   PAGE_KEY,
   URLPaths,
 } from "../../shared/utils/constant";
-import { checkHasError, getAllError, setItemToLocalStorage } from "../../shared/utils/helper";
+import {
+  checkHasError,
+  getAllError,
+  setItemToLocalStorage,
+} from "../../shared/utils/helper";
 import "./FeddBackForm.css";
 
 export default function FeedBackForm() {
@@ -71,6 +75,7 @@ export default function FeedBackForm() {
                 onChange={feedbackFormOnchange}
                 name="phone"
                 error={error.phone}
+                showSelect={true}
               />
               <div className="place_holer_div"></div>
             </div>
