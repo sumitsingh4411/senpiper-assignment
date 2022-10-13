@@ -23,7 +23,9 @@ export const getAllError = (data: any, setError: Function, error: any) => {
   // for phone validation
   if (data.phone.trim() === "") {
     tempError.phone = ERROR_MESSAGE.EMPTY_ERROR;
-  } else if (data.phone.length < 10) {
+  } else if (data.phone.length !== 10) {
+    tempError.phone = "Please enter valid phone number";
+  } else if (!isValidMobileNumber(data.phone)) {
     tempError.phone = "Please enter valid phone number";
   } else {
     tempError.phone = "";
@@ -106,4 +108,9 @@ export const removeItemFromLocalStorage = (
   );
   setFeedbackList(res);
   localStorage.setItem("feedbackData", JSON.stringify(res));
+};
+
+export const isValidMobileNumber = (mobileNumber: string) => {
+  var regex = /^([+]\d{2})?\d{10}$/;
+  return regex.test(mobileNumber);
 };
